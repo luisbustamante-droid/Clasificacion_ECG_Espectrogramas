@@ -1,15 +1,15 @@
-# 🩺 Proyecto CNNS Spectrograms — MIT-BIH + SVDB
+# Proyecto CNNS Spectrograms — MIT-BIH + SVDB
 
 Este proyecto implementa una arquitectura basada en **redes convolucionales (CNNs)** para la **detección automática de arritmias cardíacas** a partir de señales ECG.  
 El enfoque central consiste en la conversión de segmentos de señal en **espectrogramas 2D** (imágenes), permitiendo aprovechar arquitecturas modernas de visión por computadora como **MobileNetV3**, **EfficientNet** y **ResNet**.
 
 ---
 
-## 📚 1. Conjuntos de datos utilizados
+## 1. Conjuntos de datos utilizados
 
 El modelo fue entrenado y evaluado a partir de la combinación de **dos bases de datos complementarias** provenientes de [PhysioNet](https://physionet.org/):
 
-### 🫀 MIT-BIH Arrhythmia Database (MITDB)
+### MIT-BIH Arrhythmia Database (MITDB)
 - **Fuente:** Beth Israel Hospital (Boston) y MIT Laboratory for Computational Physiology.  
 - **Contenido:** 48 registros de aproximadamente 30 minutos de duración cada uno.  
 - **Frecuencia de muestreo:** 360 Hz.  
@@ -18,7 +18,7 @@ El modelo fue entrenado y evaluado a partir de la combinación de **dos bases de
 - **Norma empleada:** AAMI EC57 — estándar para evaluación de algoritmos de arritmias.  
 - **Referencia:** [MIT-BIH Arrhythmia Database – PhysioNet](https://physionet.org/content/mitdb/1.0.0/)
 
-### ❤️ MIT-BIH Supraventricular Arrhythmia Database (SVDB)
+### MIT-BIH Supraventricular Arrhythmia Database (SVDB)
 - **Fuente:** Beth Israel Hospital (Boston).  
 - **Contenido:** 78 registros de entre 30 y 60 minutos, con énfasis en arritmias **supraventriculares**.  
 - **Frecuencia de muestreo:** 128 Hz (reescalada a 360 Hz para compatibilidad).  
@@ -28,7 +28,7 @@ El modelo fue entrenado y evaluado a partir de la combinación de **dos bases de
 
 ---
 
-## 🧩 2. Estructura de los datos combinados
+## 2. Estructura de los datos combinados
 
 Los registros de ambos datasets fueron unificados y normalizados bajo un mismo esquema de muestreo y etiquetado, siguiendo la **clasificación AAMI EC57**.  
 Cada latido (beat) se asocia a una de las cinco clases principales:
@@ -45,7 +45,7 @@ Cada beat fue procesado en una **ventana centrada en el R-peak** (≈2.5 s), gar
 
 ---
 
-## 🎛️ 3. Preprocesamiento y generación de espectrogramas
+## 3. Preprocesamiento y generación de espectrogramas
 
 1. **Remuestreo:**  
    Todas las señales fueron remuestreadas a **360 Hz**.
@@ -71,7 +71,7 @@ Cada beat fue procesado en una **ventana centrada en el R-peak** (≈2.5 s), gar
 
 ---
 
-## ⚖️ 4. Balanceo y aumentación de datos
+## 4. Balanceo y aumentación de datos
 
 Para mitigar la fuerte desproporción entre clases (especialmente **S** y **F**), se aplicaron técnicas de balanceo:
 
@@ -85,7 +85,7 @@ Para mitigar la fuerte desproporción entre clases (especialmente **S** y **F**)
 
 ---
 
-## 🧠 5. Etiquetas y metadatos
+## 5. Etiquetas y metadatos
 
 Cada fila del dataset consolidado incluye:
 
@@ -101,27 +101,10 @@ Cada fila del dataset consolidado incluye:
 
 ---
 
-## 🧩 7. Referencias
-
-1. Moody GB, Mark RG. **The impact of the MIT-BIH Arrhythmia Database.** IEEE Eng Med Biol, 2001.  
-2. Goldberger AL et al. **PhysioBank, PhysioToolkit, and PhysioNet.** Circulation, 2000.  
-3. AAMI EC57: **Testing and Reporting Performance Results of Cardiac Rhythm and ST Segment Measurement Algorithms.**  
-4. Xu et al., *“Arrhythmia Classification Using 2D Spectrogram and CNN”*, 2022.  
-5. Acharya et al., *“Deep convolutional neural network for automatic diagnosis of ECG signals”*, 2017.
-
----
-
-## 🧾 8. Notas finales
+## 6. Notas finales
 
 - El conjunto combinado MITDB+SVDB permite cubrir un espectro más amplio de arritmias.  
 - Los splits de validación y prueba se mantienen **sin SMOTE ni augmentación**.  
 - La inferencia en la aplicación Streamlit utiliza **ventanas consecutivas** sin filtrado por tipo de base de datos, replicando condiciones reales de monitoreo ECG.
-
----
-
-> **Autor:** Proyecto CNNS Spectrograms  
-> **Desarrollado por:** [Tu nombre o equipo]  
-> **Fecha:** Octubre 2025  
-> **Licencia:** Uso académico e investigación
 
 
