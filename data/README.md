@@ -101,17 +101,7 @@ Cada fila del dataset consolidado incluye:
 
 ---
 
-## 6. Referencias
-
-1. Moody GB, Mark RG. **The impact of the MIT-BIH Arrhythmia Database.** IEEE Eng Med Biol, 2001.  
-2. Goldberger AL et al. **PhysioBank, PhysioToolkit, and PhysioNet.** Circulation, 2000.  
-3. AAMI EC57: **Testing and Reporting Performance Results of Cardiac Rhythm and ST Segment Measurement Algorithms.**  
-4. Xu et al., *“Arrhythmia Classification Using 2D Spectrogram and CNN”*, 2022.  
-5. Acharya et al., *“Deep convolutional neural network for automatic diagnosis of ECG signals”*, 2017.
-
----
-
-## 7. Notas finales
+## 6. Notas finales
 
 - El conjunto combinado MITDB+SVDB permite cubrir un espectro más amplio de arritmias.  
 - Los splits de validación y prueba se mantienen **sin SMOTE ni augmentación**.  
