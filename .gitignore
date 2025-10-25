@@ -1,0 +1,36 @@
+# Entornos
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos temporales y cachés
+.ipynb_checkpoints/
+*.log
+*.tmp
+.DS_Store
+
+# Datos (grandes o confidenciales)
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Modelos entrenados
+models/*.pkl
+models/*.pt
+!models/README.md
+
+# Resultados grandes
+results/figures/
+results/metrics/
+results/reports/
+
+# Notebooks de ejecución temporal
+*.ipynb_checkpoints/
+*.nbconvert/
+
+# Archivos del sistema
+Thumbs.db
