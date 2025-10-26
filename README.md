@@ -86,9 +86,9 @@ Este trabajo propone un enfoque basado en **espectrogramas STFT** (Short-Time Fo
 
 | Modelo                | Macro F1 (Val) | Macro F1 (Test) | Accuracy (Val) | Accuracy (Test) |
 |-----------------------|----------------|------------------|----------------|-----------------|
-| **ResNet-50 (Cosine)**       | 0.49 | 0.56 | 0.84 | 0.86 |
-| **MobileNetV3-Large**        | **0.69** | **0.63** | **0.91** | **0.80** |
-| **EfficientNetV2-B0**        | **0.70** | **0.65** | **0.93** | **0.83** |
+| **ResNet-50 (Cosine)**       | 0.6138 | 0.6121 | 0.8361 | 0.8038 |
+| **MobileNetV3-Large**        | 0.6907 | 0.6277 | 0.9127 | 0.8046 |
+| **EfficientNetV2-B0**        | **0.7013** | **0.6495** | **0.9348** | **0.8327** |
 
 Los modelos basados en **espectrogramas STFT** logran una mejora sustancial sobre métodos puramente temporales, mostrando **mayor sensibilidad en las clases minoritarias `S` y `F`**.  
 EfficientNetV2-B0 alcanzó el mejor equilibrio entre precisión global y generalización.
@@ -102,9 +102,3 @@ EfficientNetV2-B0 alcanzó el mejor equilibrio entre precisión global y general
 - PyTorch ≥ 2.3  
 - CUDA (recomendado)  
 - Dependencias: `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `tqdm`, `opencv-python`, `wfdb`, `timm`
-
-### Instalación
-```bash
-git clone https://github.com/tuusuario/cnns-spectrograms.git
-cd cnns-spectrograms
-pip install -r requirements.txt
