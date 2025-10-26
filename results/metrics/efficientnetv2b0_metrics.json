@@ -1,0 +1,15 @@
+{
+    "model": "EfficientNetV2-B0",
+    "epochs": 15,
+    "best_epoch": 10,
+    "train_acc": 0.9822,
+    "val_loss": 0.0995,
+    "val_f1_macro": 0.7013,
+    "val_accuracy": 0.9348,
+    "test_f1_macro": 0.6495,
+    "test_accuracy": 0.8327,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "loss_function": "ClassBalancedFocalLoss (label smoothing)",
+    "notes": "Modelo con mejor rendimiento global. Gran estabilidad y generalización, especialmente en clases S y F."
+}
