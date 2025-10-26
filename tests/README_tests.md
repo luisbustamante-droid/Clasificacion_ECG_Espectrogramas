@@ -78,8 +78,3 @@ tests/test_app.py ....                                               [100%]
 
 - Estas pruebas se ejecutan **sin necesidad de GPU**, ya que usan tensores aleatorios o señales pequeñas de prueba.  
 - Los modelos `.pt` se cargan en modo `eval()` para evitar requerir entrenamiento.  
-- Se recomienda ejecutar `pytest` después de cualquier cambio en los módulos:
-  - `utils/utils_ecg.py`
-  - `utils/utils_spectrograms.py`
-  - `utils/utils_models.py`
-  - `informe_clinico.py` o `app.py`
