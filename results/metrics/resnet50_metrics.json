@@ -1,0 +1,15 @@
+{
+    "model": "ResNet-50",
+    "epochs": 6,
+    "best_epoch": 6,
+    "train_acc": 0.9802,
+    "val_loss": 0.1140,
+    "val_f1_macro": 0.6138,
+    "val_accuracy": 0.8361,
+    "test_f1_macro": 0.6121,
+    "test_accuracy": 0.8038,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "loss_function": "ClassBalancedFocalLoss (label smoothing)",
+    "notes": "Baseline profundo y estable. Menor generalización en clases minoritarias, pero confirma la coherencia del pipeline."
+}

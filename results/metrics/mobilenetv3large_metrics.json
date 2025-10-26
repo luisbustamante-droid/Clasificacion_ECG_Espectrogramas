@@ -1,0 +1,15 @@
+{
+    "model": "MobileNetV3-Large",
+    "epochs": 20,
+    "best_epoch": 12,
+    "train_acc": 0.9845,
+    "val_loss": 0.1270,
+    "val_f1_macro": 0.6907,
+    "val_accuracy": 0.9127,
+    "test_f1_macro": 0.6277,
+    "test_accuracy": 0.8046,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "loss_function": "ClassBalancedFocalLoss (label smoothing)",
+    "notes": "Modelo eficiente y ligero, excelente para inferencia en tiempo real. Rendimiento cercano a EfficientNet con menor costo computacional."
+}
